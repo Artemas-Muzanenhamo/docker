@@ -34,3 +34,35 @@ And in our case it will not show anything as there are no images currently runni
 `docker images` - Shows you a list of all images on your local machine.
 
 ## Containers and Images
+
+`Images` - Stopped containers.
+`Containers` - Running images.
+
+`docker pull alpine` - This will pull the latest `Alpine` image from `DockerHub` without the need to execute the `docker run` command.
+
+```bash
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+alpine              latest              3fd9065eaf02        2 months ago        4.15MB
+hello-world         latest              f2a91732366c        4 months ago        1.85kB
+```
+
+`docker pull alpine:3.6` - This will pull the `Alpine` image version 3.6 from `DockerHub`.
+
+```bash
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+alpine              latest              3fd9065eaf02        2 months ago        4.15MB
+alpine              3.6                 77144d8c6bdc        2 months ago        3.97MB
+hello-world         latest              f2a91732366c        4 months ago        1.85kB
+```
+
+Suppose you wanted to remove the image `Alpine` version `3.6`.
+
+`docker rmi alpine:3.6` - Removes an image by the image ID. But can also be used to remove an image by the image name & tag.
+
+```bash
+MacBook-Pro-26:docker amuzanenhamo$ docker rmi alpine:3.6
+Untagged: alpine:3.6
+Untagged: alpine@sha256:3d44fa76c2c83ed9296e4508b436ff583397cac0f4bad85c2b4ecc193ddb5106
+Deleted: sha256:77144d8c6bdce9b97b6d5a900f1ab85da325fe8a0d1b0ba0bbff2609befa2dda
+Deleted: sha256:9dfa40a0da3b1a8a7c34abc596d81ede2dba4ecd5c0a7211086d6685da1ce6ef
+```
