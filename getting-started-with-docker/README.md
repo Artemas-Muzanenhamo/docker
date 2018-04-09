@@ -76,3 +76,12 @@ Deleted: sha256:9dfa40a0da3b1a8a7c34abc596d81ede2dba4ecd5c0a7211086d6685da1ce6ef
 `docker rmi $(docker images -q)` - `-q` means quietly and returns only `IDs`. This will delete all the images stored locally given the `IDs` returned.
 
 `docker rm $(docker ps -aq)` - Removes all the images and containers.
+
+## Swarm Mode and Microservices
+
+* A `Swarm` - A cluster. A collection of Docker Engines joint into a cluster is called a `swarm`.
+* Swarm mode - A Docker Engine running on each node in the `Swarm` is said to be `running in Swarm mode`. 
+* `Manager Nodes` - These maintain the swarm.
+* `Worker Nodes` - These nodes just execute tasks.
+* `Services` - A Declarative way of running tasks & scalable.
+* `Tasks` - An atomic unit of work assigned to a working node. 
