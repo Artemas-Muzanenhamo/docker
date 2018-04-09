@@ -66,3 +66,15 @@ Untagged: alpine@sha256:3d44fa76c2c83ed9296e4508b436ff583397cac0f4bad85c2b4ecc19
 Deleted: sha256:77144d8c6bdce9b97b6d5a900f1ab85da325fe8a0d1b0ba0bbff2609befa2dda
 Deleted: sha256:9dfa40a0da3b1a8a7c34abc596d81ede2dba4ecd5c0a7211086d6685da1ce6ef
 ```
+
+## Container Lifecycle
+
+`docker start <container>`
+`docker stop <container>`
+`docker rm <container>`
+
+`Ctrl P+Q` - gets you out of a container without stopping the container.
+
+`docker rmi $(docker images -q)` - `-q` means quietly and returns only `IDs`. This will delete all the images stored locally given the `IDs` returned.
+
+`docker rm $(docker ps -aq)` - Removes all the images and containers.
