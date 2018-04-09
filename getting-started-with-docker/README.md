@@ -69,9 +69,7 @@ Deleted: sha256:9dfa40a0da3b1a8a7c34abc596d81ede2dba4ecd5c0a7211086d6685da1ce6ef
 
 ## Container Lifecycle
 
-`docker start <container>`
-`docker stop <container>`
-`docker rm <container>`
+`docker start <container>` -> `docker stop <container>` -> `docker rm <container>`
 
 `Ctrl P+Q` - gets you out of a container without stopping the container.
 
