@@ -14,3 +14,9 @@ Now, to build them, we've leverage a bunch of Kernel low level stuff. In particu
     <img src="https://user-images.githubusercontent.com/29547780/40361125-350c9dfa-5dc0-11e8-946d-9b615bee7e61.png">
 </p>
 
+The _Docker Engine_ is just like any other engine, it is modular.
+We might interface with it throught the CLI but under the covers it's just a bunch of smaller moving parts.
+
+<p>
+    <img src="https://user-images.githubusercontent.com/29547780/40432546-dec21186-5ea1-11e8-80cf-cb937a9f4324.png">
+</p>
