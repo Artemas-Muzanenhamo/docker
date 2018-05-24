@@ -45,8 +45,9 @@ So the workflow of the diagram above is as follow:
 #### Hypervisors
 
 <p align="center">
-    <img src="https://user-images.githubusercontent.com/29547780/40479439-766c276e-5f43-11e8-9d7a-e2a07cd56100.png">
+    <img src="https://user-images.githubusercontent.com/29547780/40479600-f6600dbe-5f43-11e8-80a1-a017ddb1e2a3.png">
 </p>
 
 * In the _hypervisors_ world we take a single physical machine with all it's resources ( _CPU, RAM_ )
 and we carve out one or more virtual machines.
+* Each one gets its own virtual CPU, virtual RAM, virtual memory, virtual networking.... the whole shabang.
