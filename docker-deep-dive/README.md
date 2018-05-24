@@ -50,4 +50,4 @@ So the workflow of the diagram above is as follow:
 
 * In the _hypervisors_ world we take a single physical machine with all it's resources ( _CPU, RAM_ )
 and we carve out one or more virtual machines.
-* Each one gets its own virtual CPU, virtual RAM, virtual memory, virtual networking.... the whole shabang.
+* Each virtual machine gets its own virtual CPU, virtual RAM, virtual memory, virtual networking.... the whole shabang.
