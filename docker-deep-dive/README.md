@@ -41,3 +41,12 @@ So the workflow of the diagram above is as follow:
 </p>
 
 * These let us take an operating system and carve into multiple isolated virtual operating systems. It's a bit like _Hypervisors_ in _Virtual Machines_.
+
+#### Hypervisors
+
+<p align="center">
+    <img src="https://user-images.githubusercontent.com/29547780/40479439-766c276e-5f43-11e8-9d7a-e2a07cd56100.png">
+</p>
+
+* In the _hypervisors_ world we take a single physical machine with all it's resources ( _CPU, RAM_ )
+and we carve out one or more virtual machines.
