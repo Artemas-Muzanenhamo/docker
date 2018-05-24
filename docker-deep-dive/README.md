@@ -26,3 +26,18 @@ So the workflow of the diagram above is as follow:
 * We use a command line to create a container: `docker container run`
 * The client takes the command and makes the appropriate API request to the _containers/create_ endpoint in the engine.
 * The docker engine then pulls all of the required kernel stuff _(namespaces, groups)_ and _pop!_ Out comes a container.
+
+## Kernel Internals
+
+* The stuff( _namespsaces, control groups_ ) to build _Containers_ is *NOT* new.
+* There are two main building blocks when creating containers. _Namespaces_ and _Control Groups_.
+* Both of them are Linux Kernel primitives.
+* _Namespaces_ are about isolation and _Control Groups_ are about grouping objects and setting limits.
+
+### Namespaces
+
+<p align="center">
+    <img src="https://user-images.githubusercontent.com/29547780/40477855-6fa00aa8-5f3f-11e8-87a1-89d5bd795388.png">
+</p>
+
+* These let us take an operating system and carve into multiple isolated virtual operating systems. It's a bit like _Hypervisors_ in _Virtual Machines_.
