@@ -15,8 +15,8 @@ Now, to build them, we've leverage a bunch of Kernel low level stuff. In particu
 </p>
 
 The _Docker Engine_ is just like any other engine, it is modular.
-We might interface with it throught the CLI but under the covers it's just a bunch of smaller moving parts.
+We might interface with it through the CLI but under the covers it's just a bunch of smaller moving parts.
 
 <p align="center">
-    <img src="https://user-images.githubusercontent.com/29547780/40432546-dec21186-5ea1-11e8-80cf-cb937a9f4324.png">
+    <img src="https://user-images.githubusercontent.com/29547780/40476005-e5f66ada-5f3a-11e8-8094-68be8164bc14.png">
 </p>
