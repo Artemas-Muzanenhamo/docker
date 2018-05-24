@@ -50,4 +50,16 @@ So the workflow of the diagram above is as follow:
 
 * In the _hypervisors_ world we take a single physical machine with all it's resources ( _CPU, RAM_ )
 and we carve out one or more virtual machines.
-* Each virtual machine gets its own virtual CPU, virtual RAM, virtual memory, virtual networking.... the whole shabang.
+* Each virtual machine gets its own virtual CPU, virtual RAM, virtual memory, virtual networking.... the whole shabang ( _the whole lot_ )!
+
+#### Containers
+
+<p align="center">
+    <img src="https://user-images.githubusercontent.com/29547780/40488508-d7a55436-5f5e-11e8-8907-b648b55ebc34.png">
+</p>
+
+* Use of namespaces to take a single operating system with all of its resources ( _file systems, process trees, users..._ )
+and carve all that up into multiple virtual operating systems which are called `Containers` .
+* Each container gets its own virtual/containerized _root file system_, it's own _process tree_ and etc...
+* Just as the _hupervisor_ looks and tastes just like a regular and physical server, in the container world, each container looks
+and smells exactly like the operating system except, _it's not_. All Containers share a single _kernel_ on a host.
