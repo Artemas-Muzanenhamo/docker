@@ -18,5 +18,5 @@ The _Docker Engine_ is just like any other engine, it is modular.
 We might interface with it through the CLI but under the covers it's just a bunch of smaller moving parts.
 
 <p align="center">
-    <img src="https://user-images.githubusercontent.com/29547780/40476005-e5f66ada-5f3a-11e8-8094-68be8164bc14.png">
+    <img src="https://user-images.githubusercontent.com/29547780/40476138-31ca726c-5f3b-11e8-8fef-c5596a56a1ec.png">
 </p>
