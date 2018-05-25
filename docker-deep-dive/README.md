@@ -63,3 +63,8 @@ and carve all that up into multiple virtual operating systems which are called `
 * Each container gets its own virtual/containerized _root file system_, it's own _process tree_ and etc...
 * Just as the _hupervisor_ looks and tastes just like a regular and physical server, in the container world, each container looks
 and smells exactly like the operating system except, _it's not_. All Containers share a single _kernel_ on a host.
+* Everything is isolated so stuff in _container a_ won't even know about other containers _b_ and _c_ sharing the same _kernel host_.
+
+<p align="center">
+    <img src="https://user-images.githubusercontent.com/29547780/40539469-bfed5b0a-600c-11e8-9436-33ef0200ea32.png">
+</p>
