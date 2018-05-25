@@ -65,6 +65,8 @@ and carve all that up into multiple virtual operating systems which are called `
 and smells exactly like the operating system except, _it's not_. All Containers share a single _kernel_ on a host.
 * Everything is isolated so stuff in _container a_ won't even know about other containers _b_ and _c_ sharing the same _kernel host_.
 
+---
+
 <p align="center">
     <img src="https://user-images.githubusercontent.com/29547780/40539469-bfed5b0a-600c-11e8-9436-33ef0200ea32.png">
 </p>
