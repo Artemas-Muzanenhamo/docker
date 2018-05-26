@@ -77,10 +77,10 @@ and smells exactly like the operating system except, _it's not_. All Containers 
 * Each container is secure and has a secure boundary.
 
 
-* *Process ID (pid)* - gives each container its own isolated process tree, complete with its very own _pid 1_. 
-This means that one container is totally unaware of the existence of any other containers.
-* *Network (net)* - gives each container it's own isolated network stack. So it's a mix e.g. _Ip Tables_ and etc...
-* *Filesystem/mount(mnt)* - gives each container it's own isolated root file system e.g. `C:/` on Windows and `/` on Linux.
-* *Inter-proc comms(ipc)* - lets processors in a single container access the same shared memory, but it stops everything outside of the container. 
-* *UTS* - gives every container its own host name.
-* *User* - lets you map accounts inside a container to different users on a host.
+    - Process ID (pid) - gives each container its own isolated process tree, complete with its very own _pid 1_. 
+    This means that one container is totally unaware of the existence of any other containers.
+    - Network (net) - gives each container it's own isolated network stack. So it's a mix e.g. _Ip Tables_ and etc...
+    - Filesystem/mount(mnt) - gives each container it's own isolated root file system e.g. `C:/` on Windows and `/` on Linux.
+    - Inter-proc comms(ipc) - lets processors in a single container access the same shared memory, but it stops everything outside of the container. 
+    - UTS - gives every container its own host name.
+    - User - lets you map accounts inside a container to different users on a host.
