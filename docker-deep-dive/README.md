@@ -1,5 +1,14 @@
 # Docker Deep Dive
 
+- [Architecture Big Picture](#architecture-big-picture)
+- [Kernel Internals](#kernel-internals)
+    * [Namespaces](#namespaces)
+        + [Hypervisors](#hypervisors)
+        + [Containers](#containers)
+    * [Control Groups](#control-groups)
+- [Docker Engine](#docker-engine)
+
+
 ## Architecture Big Picture
 
 <p align="center">
@@ -63,7 +72,7 @@ and carve all that up into multiple virtual operating systems which are called `
 * Each container gets its own virtual/containerized _root file system_, it's own _process tree_ and etc...
 * Just as the _hupervisor_ looks and tastes just like a regular and physical server, in the container world, each container looks
 and smells exactly like the operating system except, _it's not_. All Containers share a single _kernel_ on a host.
-* Everything is isolated so stuff in _container a_ won't even know about other containers _b_ and _c_ sharing the same _kernel host_.
+* Everything is isolated so stuff in _container A_ won't even know about other containers _B_ and _C_ sharing the same _kernel host_.
 
 ---
 
@@ -84,3 +93,17 @@ and smells exactly like the operating system except, _it's not_. All Containers 
     - Inter-proc comms(ipc) - lets processors in a single container access the same shared memory, but it stops everything outside of the container. 
     - UTS - gives every container its own host name.
     - User - lets you map accounts inside a container to different users on a host.
+    
+### Control Groups
+
+<p align="center">
+    <img src="https://user-images.githubusercontent.com/29547780/49346120-8c50f800-f685-11e8-8b79-4cecf2c829ee.png">
+</p>
+
+* Like any multi-tenant system, there is always the fear of _noisy neighbours_.
+* The last thing `Container A` wants is `Container D` to start chewing all the _CPU_ and _RAM_.
+* So in this case we need something to _police_ the consumption of system resources. In the _linux_ world,
+this is called `Control Groups/ C-Groups`. In the windows_ world, this is called `Job Objects`.
+* The idea here of Control Groups is to group processes and impose limits.
+
+## Docker Engine
