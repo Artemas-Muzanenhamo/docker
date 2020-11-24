@@ -50,3 +50,60 @@ improved Docker's networking system.
 
 So in a nutshell: 
 `CNM (Design/DNA) -----> LibNetwork (Control plane & management plane) -----> Drivers (Data plane)`
+
+### Hands on Basic Docker Networking Commands
+
+- List container networks:
+
+```shell script
+$ docker network ls
+
+NETWORK ID          NAME                        DRIVER              SCOPE
+c6e6b66865bc        bridge                      bridge              local
+cb81fa2b19f2        flux-book-store_default     bridge              local
+e074bb3fd965        host                        host                local
+552bb7578b88        none                        null                local
+a10eea6b9cb9        party-reservation_default   bridge              local
+```
+- Every network get a unique ID, a name, which driver owns the container and the scope.
+
+- Get more information on a specific container network:
+
+```shell script
+$ docker network inspect party-reservation_default
+
+[
+    {
+        "Name": "party-reservation_default",
+        "Id": "a10eea6b9cb91a31fa105e3f60197e8f37393205fac4cf5349be5c4604879d9e",
+        "Created": "2020-09-09T01:13:17.8669175Z",
+        "Scope": "local",
+        "Driver": "bridge",
+        "EnableIPv6": false,
+        "IPAM": {
+            "Driver": "default",
+            "Options": null,
+            "Config": [
+                {
+                    "Subnet": "172.18.0.0/16",
+                    "Gateway": "172.18.0.1"
+                }
+            ]
+        },
+        "Internal": false,
+        "Attachable": true,
+        "Ingress": false,
+        "ConfigFrom": {
+            "Network": ""
+        },
+        "ConfigOnly": false,
+        "Containers": {},
+        "Options": {},
+        "Labels": {
+            "com.docker.compose.network": "default",
+            "com.docker.compose.project": "party-reservation",
+            "com.docker.compose.version": "1.26.2"
+        }
+    }
+]
+```
