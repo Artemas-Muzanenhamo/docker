@@ -35,5 +35,18 @@ improved Docker's networking system.
 
 - Libnetwork
     - Real world implementation of the CNM by Docker, Inc.
+    - The CNM is the design and [Libnetwork](https://github.com/moby/libnetwork) is the implementation of that design in GoLang code.
+    - Central place for all Docker networking logic, API, UX etc...
+    - X-platform as it had to run almost on any platform, Windows, Linux etc...
     
 - Drivers
+    - Sits on top of the Libnetwork.
+    - This is where the Network-specific details live.
+    - Each Network type has its own driver:
+        - Overlay driver = Overlay Networks.
+        - MACVLAN driver = MACVLAN Networks.
+        - IPVLAN driver = IPVLAN Networks.
+        - Bridge driver = Bridge Networks.
+
+So in a nutshell: 
+`CNM (Design/DNA) -----> LibNetwork (Control plane & management plane) -----> Drivers (Data plane)`
