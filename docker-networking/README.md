@@ -107,3 +107,61 @@ $ docker network inspect party-reservation_default
     }
 ]
 ```
+
+## Use Cases and Drivers
+
+### Single-host Networking (With the bridge driver)
+
+- Bridge networks are single host networks.
+
+![single-host-networking](https://user-images.githubusercontent.com/29547780/100110510-ee075f80-2e64-11eb-84d6-29aab9381ac4.png)
+
+- Create a network bridge
+```shell script
+$ docker network create -d bridge --subnet 10.0.0.1/24 ps-bridge
+e7c69494a93b5a1b6f8455bf1ca43312e64dab7ca62c5252e9819e14c298169e
+```
+- Check for the created network
+```shell script
+$ docker network ls
+NETWORK ID          NAME                        DRIVER              SCOPE
+c6e6b66865bc        bridge                      bridge              local
+cb81fa2b19f2        flux-book-store_default     bridge              local
+e074bb3fd965        host                        host                local
+552bb7578b88        none                        null                local
+a10eea6b9cb9        party-reservation_default   bridge              local
+e7c69494a93b        ps-bridge                   bridge              local
+```
+- Inspect the created network
+```shell script
+$ docker network inspect ps-bridge
+[
+    {
+        "Name": "ps-bridge",
+        "Id": "e7c69494a93b5a1b6f8455bf1ca43312e64dab7ca62c5252e9819e14c298169e",
+        "Created": "2020-11-24T14:57:44.2541719Z",
+        "Scope": "local",
+        "Driver": "bridge",
+        "EnableIPv6": false,
+        "IPAM": {
+            "Driver": "default",
+            "Options": {},
+            "Config": [
+                {
+                    "Subnet": "10.0.0.1/24"
+                }
+            ]
+        },
+        "Internal": false,
+        "Attachable": false,
+        "Ingress": false,
+        "ConfigFrom": {
+            "Network": ""
+        },
+        "ConfigOnly": false,
+        "Containers": {},
+        "Options": {},
+        "Labels": {}
+    }
+]
+```
